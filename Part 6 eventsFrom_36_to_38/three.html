@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur javascript</title>
+</head>
+<body>
+    <h1>Chai aur javascript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    let intervalid;
+    const sayDate = function(str){
+        console.log(str, Date.now);    
+    }
+    // const interValid = setInterval(sayDate ,1000, "Hi")
+
+    // clearInterval(interValid)
+
+    document.querySelector('#start').addEventListener('click', ()=>{
+        intervalid = setInterval(sayDate ,1000, "Hi")
+    })
+
+    document.querySelector('#stop').addEventListener('click', ()=>{
+        clearInterval(intervalid)
+    })
+
+    // if(document.querySelector('#stop')){
+    //     addEventListener('click', ()=>{
+    //     setInterval(sayDate ,1000, "Hi")
+        
+    // })
+    // }
+    // else if(document.querySelector('#stop')){
+    //     addEventListener('click', ()=>{
+    //     clearInterval(sayDate ,1000, "Hi")
+    // })
+    // }
+    // one more project is there in project folder
+    
+
+</script>
+</html>

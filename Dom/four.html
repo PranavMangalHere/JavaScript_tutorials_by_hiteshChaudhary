@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom </title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>   
+</body>
+<script>
+    // function addLanguage(langName){
+    //     const li = document.createElemenet('li');
+    //     li.innerHTML = `${langName}`;
+    //     document.querySelector('.language').appendChild(li)
+    // }
+    // addLanguage("python");
+    function addOptional(langName){
+        const li = document.createElemenet('li');
+        li.appendChild(document.createTextNode(langName));
+        document.querySelector('.language').appendChild(li)
+    }
+    // addOptional('golang')
+
+    // Edit 
+    const NameChange = document.querySelector("li:nth-child(1)")
+    // NameChange.innerHTML = "dsfvgb"
+    // or
+    const newli = document.createElement('li')
+    newli.textContent = "Mojo"
+    NameChange.replaceWith(newli);
+    // or
+    const firstLang = document.querySelector("li:first-child")
+    firstLang.outerHTML = '<li>C++</li>'
+
+    // remove
+    const removeLang = document.querySelector('li:first-child')
+    // removeLang.remove()
+</script>
+</html>
